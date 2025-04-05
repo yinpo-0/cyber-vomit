@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN"> 
 <head>
-    <title>赛博呕吐物</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛博呕吐物</title>
     <style>
         body {
             background: #000;
             color: #0f0;
-            font-family: 'Courier New', monospace;
+            font-family: 'Courier New', Consolas, monospace; 
             text-align: center;
-            padding: 50px;
+            padding: 50px 20px; 
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .curse-text {
             border: 3px dashed #f00;
@@ -18,23 +23,32 @@
             margin: 30px auto;
             max-width: 600px;
             text-shadow: 0 0 10px #0f0;
+            background: rgba(0, 0, 0, 0.7); 
         }
         .blink {
             animation: blinker 1s linear infinite;
+            -webkit-animation: blinker 1s linear infinite; 
         }
         @keyframes blinker {
             50% { opacity: 0; }
+        }
+        @-webkit-keyframes blinker { 
+            50% { opacity: 0; }
+        }
+        p {
+            line-height: 1.6;
+            margin: 15px 0;
         }
     </style>
 </head>
 <body>
     <div class="curse-text">
-        <h1 class="blink">⚠️ 警告 ⚠️</h1>
+        <h1 class="blink" aria-label="警告">⚠️ 警告 ⚠️</h1>
         <p>您已感染【赛博呕吐病毒.exe】</p >
         <p>转发本页面到5个群组</p >
         <p>否则你的Steam库存将变成</p >
         <p>【黄金矿工终极典藏版】</p >
-        <p style="font-size: 8px;">免责声明：本诅咒由重音teto开发</p >
+        <p style="font-size: 10px; opacity: 0.5;">免责声明：本诅咒由重音teto开发</p >
     </div>
 </body>
 </html>
